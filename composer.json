@@ -1,0 +1,16 @@
+{
+    "name": "michal-wrona/php-starter",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "MichalWrona\\PhpStarter\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Michal Wrona",
+            "email": "miwrona2@interia.pl"
+        }
+    ],
+    "require": {}
+}
