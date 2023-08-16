@@ -2,6 +2,7 @@ version: '3'
 services: 
     php:
         image: webdevops/php-nginx-dev:8.2
+        container_name: php
         restart: always
         user: root
         environment:
