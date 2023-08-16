@@ -1,0 +1,21 @@
+version: '3'
+services: 
+    php:
+        image: webdevops/php-nginx-dev:8.2
+        restart: always
+        user: root
+        environment:
+          - WEB_ALIAS_DOMAIN=local.php.com
+          - WEB_DOCUMENT_ROOT=/app/pub/
+          - PHP_DATE_TIMEZONE=EST
+          - PHP_DISPLAY_ERRORS=1
+          - PHP_MEMORY_LIMIT=4096M
+          - PHP_MAX_EXECUTION_TIME=300
+          - PHP_POST_MAX_SIZE=500M
+          - PHP_UPLOAD_MAX_FILESIZE=1024M
+          - COMPOSER_VERSION=2
+        volumes:
+          - ./:/app:cached       
+        ports:
+          - "84:80"
+          - "443:443"
