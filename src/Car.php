@@ -16,7 +16,7 @@ class Car
             'brand' => $this->getBrand(),
             'model' => $this->getModel(),
             'color' => 'black'
-        ];:
+        ];
     }
 
     public function getBrand(): string
