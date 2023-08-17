@@ -1,7 +1,7 @@
 <?php
 echo 'Magic Methods';
 
-require ('../vendor/autoload.php');
+require('../vendor/autoload.php');
 
 use MichalWrona\PhpStarter\Car;
 
@@ -21,3 +21,18 @@ print_r('</pre>');
  * with __serialize() implemented in Car
  * O:26:"MichalWrona\PhpStarter\Car":3:{s:5:"brand";s:9:"Chevrolet";s:5:"model";s:5:"Tahoe";s:5:"color";s:5:"black";}
  */
+
+
+//__call example
+
+$car->setData('Type', 'SUV');
+print_r('<pre>');
+print_r($car->getType());
+print_r('</pre>');
+
+$car->setProductionYear(2011);
+print_r('<pre>');
+print_r($car->getProductionYear());
+print_r('</pre>');
+
+var_dump($car->getData());
