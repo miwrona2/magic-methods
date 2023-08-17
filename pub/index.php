@@ -1,11 +1,14 @@
 <?php
-echo 'Magic Methods';
 
 require('../vendor/autoload.php');
 
 use MichalWrona\PhpStarter\Car;
+use MichalWrona\PhpStarter\Company;
+
+print '<h1>Magic Methods in PHP</h1>' . PHP_EOL;
 
 //__serialize() example
+print '<h3>__serialize</h3>' . PHP_EOL;
 
 $car = new Car();
 $car->setBrand('Chevrolet');
@@ -24,15 +27,36 @@ print_r('</pre>');
 
 
 //__call example
+print '<h3>__call</h3>' . PHP_EOL;
 
-$car->setData('Type', 'SUV');
-print_r('<pre>');
-print_r($car->getType());
-print_r('</pre>');
+$company = new Company();
 
-$car->setProductionYear(2011);
-print_r('<pre>');
-print_r($car->getProductionYear());
-print_r('</pre>');
+//1. Getters and setters declared in class Company
+$company->setName('Allegro');
+$company->setIndustry('E-commerce');
+print $company->getName();
+//Allegro
 
-var_dump($car->getData());
+print '</br>';
+
+print $company->getIndustry();
+//E-commerce
+
+print '</br>';
+
+//2. Getter 'getType', 'setType' not declared in class Company
+$company->setData('Type', 'SUV');
+print $company->getType();
+//SUV
+
+print '</br>';
+
+//3. Getter and setter pair 'getProductionYear', 'setProductionYear' not declared in class Company
+$company->setProductionYear(2011);;
+print $company->getProductionYear();
+//2011
+
+print '</br>';
+
+var_dump($company->getData());
+//array(2) { ["Type"]=> string(3) "SUV" ["ProductionYear"]=> int(2011) }
