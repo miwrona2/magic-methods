@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use MichalWrona\PhpStarter\Company;
+use MichalWrona\MagicMethods\Company;
 
 //__call example
 print '<h3>__call</h3>' . PHP_EOL;

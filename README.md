@@ -43,10 +43,10 @@ print_r(serialize($car));
 print_r('</pre>');
 /**
  * without __serialize() implemented in Car
- * O:26:"MichalWrona\PhpStarter\Car":2:{s:33:"MichalWrona\PhpStarter\Carbrand";s:9:"Chevrolet";s:33:"MichalWrona\PhpStarter\Carmodel";s:5:"Tahoe";}
+ * O:26:"MichalWrona\MagicMethods\Car":2:{s:33:"MichalWrona\MagicMethods\Carbrand";s:9:"Chevrolet";s:33:"MichalWrona\MagicMethods\Carmodel";s:5:"Tahoe";}
  *
  * with __serialize() implemented in Car
- * O:26:"MichalWrona\PhpStarter\Car":3:{s:5:"brand";s:9:"Chevrolet";s:5:"model";s:5:"Tahoe";s:5:"color";s:5:"black";}
+ * O:26:"MichalWrona\MagicMethods\Car":3:{s:5:"brand";s:9:"Chevrolet";s:5:"model";s:5:"Tahoe";s:5:"color";s:5:"black";}
  */
 ```
 
@@ -56,7 +56,7 @@ _src/Car.php_
 
 declare(strict_types=1);
 
-namespace MichalWrona\PhpStarter;
+namespace MichalWrona\MagicMethods;
 
 class Car
 {
@@ -141,7 +141,7 @@ _src/Company.php_
 
 declare(strict_types=1);
 
-namespace MichalWrona\PhpStarter;
+namespace MichalWrona\MagicMethods;
 
 class Company
 {

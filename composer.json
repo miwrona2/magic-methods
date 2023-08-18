@@ -1,9 +1,9 @@
 {
-    "name": "michal-wrona/php-starter",
+    "name": "michal-wrona/magic-methods",
     "type": "project",
     "autoload": {
         "psr-4": {
-            "MichalWrona\\PhpStarter\\": "src/"
+            "MichalWrona\\MagicMethods\\": "src/"
         }
     },
     "authors": [
