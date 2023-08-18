@@ -118,7 +118,7 @@ print $company->getIndustry();
 
 print '</br>';
 
-//2. Getter 'getType', 'setType' not declared in class Company
+//2. Getter 'getType' and setter 'setType' not declared in class Company
 $company->setData('Type', 'SUV');
 print $company->getType();
 //SUV
